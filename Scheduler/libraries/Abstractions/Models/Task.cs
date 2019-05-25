@@ -1,11 +1,10 @@
-﻿using Scaffolding.TaskManager.Abstractions.Models;
+﻿using Scaffolding.Scheduler.Abstractions.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Scaffolding.TaskManager.Abstractions
+namespace Scaffolding.Scheduler.Abstractions
 {
-    public abstract class Task : ITaskManagerObject
+    public abstract class Task : ISchedulerObject
     {
         /// <summary>
         /// Unique task identifier
@@ -17,19 +16,19 @@ namespace Scaffolding.TaskManager.Abstractions
         /// Notification settings
         /// </summary>
         public string Notification { get; private set; }
-        public string Scheduler { get; private set; }
+        /// <summary>
+        /// Run configuration
+        /// </summary>
+        public string Schedule { get; private set; }
+        public TimeSpan Horizon { get; private set; } // Plan task til Now + Horizon
         /// <summary>
         /// Task input
         /// </summary>
         public string Arguments { get; private set; }
+
+        public string Agents { get; private set; }
+
         public bool Active { get; private set; }
         public TimeSpan Timeout { get; private set; }
-        public DateTime CreatedDate { get; private set; }
-        public bool Deleted { get; private set; }
-
-        public virtual IEnumerable<Job> BuildJobList()
-        {
-            throw new Exception();
-        }
     }
 }

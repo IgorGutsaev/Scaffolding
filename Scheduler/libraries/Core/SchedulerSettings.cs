@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Scaffolding.Scheduler.Abstractions;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Scaffolding.TaskManager.Abstractions.Models
+namespace Scaffolding.TaskManager.Core
 {
     public class SchedulerSettings
     {

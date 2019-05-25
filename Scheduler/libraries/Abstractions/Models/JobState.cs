@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Scaffolding.TaskManager.Abstractions
+namespace Scaffolding.Scheduler.Abstractions
 {
     public enum JobState
     {

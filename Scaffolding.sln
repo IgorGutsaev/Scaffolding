@@ -19,14 +19,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Tests.Utils", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Common.Helpers", "Common\Common\Scaffolding.Common.Helpers.csproj", "{82EA7EC9-A39F-43C3-B6F1-EF99B235C98D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskManager", "TaskManager", "{B909C43D-BB07-4930-A752-AD5E63F39770}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sheduler", "Sheduler", "{B909C43D-BB07-4930-A752-AD5E63F39770}"
 	ProjectSection(SolutionItems) = preProject
 		_readme.txt = _readme.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding.TaskManager.Abstractions", "TaskManager\libraries\Abstractions\Scaffolding.TaskManager.Abstractions.csproj", "{9E9ADB5D-0BBB-4DEF-AD73-5CA09F7CC8C4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libraries", "libraries", "{E8883F40-7B4B-41FD-8805-C69B6B78FD90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Scheduler.Abstractions", "Scheduler\libraries\Abstractions\Scaffolding.Scheduler.Abstractions.csproj", "{951DC75C-E1DA-4C9D-A99F-AB3FFB661614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler", "Tests\Scheduler\Scheduler.csproj", "{C4FCB163-481F-401F-AB57-60466496F2F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding.Scheduler.Core", "Scheduler\libraries\Core\Scaffolding.Scheduler.Core.csproj", "{C4539735-5EE8-4176-86FB-799A017474AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,10 +54,18 @@ Global
 		{82EA7EC9-A39F-43C3-B6F1-EF99B235C98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82EA7EC9-A39F-43C3-B6F1-EF99B235C98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82EA7EC9-A39F-43C3-B6F1-EF99B235C98D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E9ADB5D-0BBB-4DEF-AD73-5CA09F7CC8C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E9ADB5D-0BBB-4DEF-AD73-5CA09F7CC8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E9ADB5D-0BBB-4DEF-AD73-5CA09F7CC8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E9ADB5D-0BBB-4DEF-AD73-5CA09F7CC8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951DC75C-E1DA-4C9D-A99F-AB3FFB661614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951DC75C-E1DA-4C9D-A99F-AB3FFB661614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951DC75C-E1DA-4C9D-A99F-AB3FFB661614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951DC75C-E1DA-4C9D-A99F-AB3FFB661614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FCB163-481F-401F-AB57-60466496F2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FCB163-481F-401F-AB57-60466496F2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FCB163-481F-401F-AB57-60466496F2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FCB163-481F-401F-AB57-60466496F2F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4539735-5EE8-4176-86FB-799A017474AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4539735-5EE8-4176-86FB-799A017474AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4539735-5EE8-4176-86FB-799A017474AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4539735-5EE8-4176-86FB-799A017474AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,8 +75,10 @@ Global
 		{9A2DCAD2-C674-4B9B-B4AE-CB0A2C1CE656} = {5CB3466E-2E0F-4CF5-A99E-0B019381285B}
 		{02EDE3FF-D04E-4514-8024-6BEDADB3CF9D} = {039361A0-52B5-4EBE-B50E-5B6834A062A1}
 		{82EA7EC9-A39F-43C3-B6F1-EF99B235C98D} = {E5274E36-72D5-4AB5-BED2-B3FB92BA3287}
-		{9E9ADB5D-0BBB-4DEF-AD73-5CA09F7CC8C4} = {E8883F40-7B4B-41FD-8805-C69B6B78FD90}
 		{E8883F40-7B4B-41FD-8805-C69B6B78FD90} = {B909C43D-BB07-4930-A752-AD5E63F39770}
+		{951DC75C-E1DA-4C9D-A99F-AB3FFB661614} = {E8883F40-7B4B-41FD-8805-C69B6B78FD90}
+		{C4FCB163-481F-401F-AB57-60466496F2F4} = {039361A0-52B5-4EBE-B50E-5B6834A062A1}
+		{C4539735-5EE8-4176-86FB-799A017474AD} = {E8883F40-7B4B-41FD-8805-C69B6B78FD90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3905E666-1C04-492D-B7D7-8081BC6845CA}

@@ -1,14 +1,14 @@
-﻿using Scaffolding.TaskManager.Abstractions.Models;
+﻿using Scaffolding.Scheduler.Abstractions.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Scaffolding.TaskManager.Abstractions
+namespace Scaffolding.Scheduler.Abstractions
 {
     /// <summary>
-    /// Task manager service
+    /// Scheduler service
     /// </summary>
-    public interface ITaskManager<T> where T : ITaskManagerObject
+    public interface ISchedulerService<T> where T : ISchedulerObject
     {
         IEnumerable<T> Get(Predicate<T> predicate);
 
