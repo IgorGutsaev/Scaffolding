@@ -28,9 +28,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libraries", "libraries", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Scheduler.Abstractions", "Scheduler\libraries\Abstractions\Scaffolding.Scheduler.Abstractions.csproj", "{951DC75C-E1DA-4C9D-A99F-AB3FFB661614}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler", "Tests\Scheduler\Scheduler.csproj", "{C4FCB163-481F-401F-AB57-60466496F2F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Tests.Scheduler", "Tests\Scheduler\Scaffolding.Tests.Scheduler.csproj", "{C4FCB163-481F-401F-AB57-60466496F2F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding.Scheduler.Core", "Scheduler\libraries\Core\Scaffolding.Scheduler.Core.csproj", "{C4539735-5EE8-4176-86FB-799A017474AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scaffolding.Scheduler.Core", "Scheduler\libraries\Core\Scaffolding.Scheduler.Core.csproj", "{C4539735-5EE8-4176-86FB-799A017474AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
