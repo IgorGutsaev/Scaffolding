@@ -29,7 +29,7 @@ namespace Scaffolding.Scheduler.Core
             ConcurrentBag<Job> jobList = new ConcurrentBag<Job>();
             List<Threading.Task> jobAddTasks = new List<Threading.Task>();
 
-            System.Threading.Tasks.Parallel.ForEach(Settings.Tasks.Where(t => t.Active), (t) =>
+            System.Threading.Tasks.Parallel.ForEach(Settings.Tasks().Where(t => t.Active), (t) =>
             {
                 jobAddTasks.Add(System.Threading.Tasks.Task.Run(
                     () => {

@@ -34,7 +34,7 @@ namespace Scaffolding.Tests.Scheduler
                 {
                     settings.DelayStart = new TimeSpan(0, 0, 5);
                     settings.Period = new TimeSpan(0, 5, 0);
-                    settings.Tasks = (new Scaffolding.Scheduler.Abstractions.Task[]
+                    settings.Tasks = () => (new Scaffolding.Scheduler.Abstractions.Task[]
                     {
                         Task.Create(identifier, schedule, string.Empty, agents, TimeSpan.FromHours(horizonHours))
                     }).ToList();
