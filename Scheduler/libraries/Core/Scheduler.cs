@@ -45,7 +45,7 @@ namespace Scaffolding.Scheduler.Core
                                 agents = new string[] { string.Empty };
 
                             foreach (var agent in agents)
-                                jobList.Add(Job.Create(t.Identifier, point, agent, point.Add(t.Timeout)));
+                                jobList.Add(Job.Create(t.Identifier, point, agent.Trim(), point.Add(t.Timeout)));
                         }
                     }));
             });
