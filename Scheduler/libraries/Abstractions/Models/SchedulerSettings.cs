@@ -13,7 +13,6 @@ namespace Scaffolding.Scheduler.Abstractions.Models
 
         public event EventHandler<Job> OnNewJob;
 
-
         public const uint DefaultDueTime = 0;
         public const uint DefaultPeriod = 5;
     }

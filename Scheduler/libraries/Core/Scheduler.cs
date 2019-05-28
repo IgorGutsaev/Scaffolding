@@ -13,7 +13,7 @@ namespace Scaffolding.Scheduler.Core
 {
     public class Scheduler
     {
-        private event EventHandler<Job> OnNewJob;
+        public event EventHandler<Job> OnNewJob;
 
         public Scheduler(Action<SchedulerSettings> setupAction
             , Predicate<Job> isNewJob)
@@ -29,7 +29,7 @@ namespace Scaffolding.Scheduler.Core
             ConcurrentBag<Job> jobList = new ConcurrentBag<Job>();
             List<Threading.Task> jobAddTasks = new List<Threading.Task>();
 
-            System.Threading.Tasks.Parallel.ForEach(Settings.Tasks, (t) =>
+            System.Threading.Tasks.Parallel.ForEach(Settings.Tasks.Where(t => t.Active), (t) =>
             {
                 jobAddTasks.Add(System.Threading.Tasks.Task.Run(
                     () => {
