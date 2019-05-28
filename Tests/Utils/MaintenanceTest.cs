@@ -4,6 +4,7 @@ using Scaffolding.Utils.Maintenance;
 using Microsoft.Extensions.DependencyInjection;
 using Scaffolding.Tests.Utils;
 using System.Diagnostics;
+using Scaffolding.Scheduler.Abstractions;
 
 namespace Scaffolding.Test.Utils
 {

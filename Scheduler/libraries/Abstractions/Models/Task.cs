@@ -1,10 +1,9 @@
 ﻿using Scaffolding.Scheduler.Abstractions.Models;
 using System;
-using System.Collections.Generic;
 
 namespace Scaffolding.Scheduler.Abstractions
 {
-    public abstract class Task : ISchedulerObject
+    public class Task : ISchedulerObject
     {
         /// <summary>
         /// Unique task identifier
@@ -30,5 +29,20 @@ namespace Scaffolding.Scheduler.Abstractions
 
         public bool Active { get; protected set; }
         public TimeSpan Timeout { get; protected set; }
+
+        static public Task Create(string identifier, string schedule, string args, string agents, TimeSpan horizon, string description = "")
+            => new Task
+            {
+                Active = true,
+                Identifier = identifier,
+                Arguments = args,
+                Agents = agents,
+                Description = description,
+                Horizon = horizon == TimeSpan.Zero ? TimeSpan.FromHours(1) : horizon,
+                Notification = "",
+                Schedule = schedule,
+                Timeout = TimeSpan.FromMinutes(1),
+                Title = ""
+            };
     }
 }

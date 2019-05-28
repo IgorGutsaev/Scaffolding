@@ -26,7 +26,7 @@ namespace Scaffolding.Scheduler.Core
         {
             var result = new List<DateTime>();
 
-            if (from <= to)
+            if (from > to)
                 return result;
 
             DateTime date = from.Date;

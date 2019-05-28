@@ -6,7 +6,7 @@ namespace Scaffolding.Scheduler.Abstractions.Models
 {
     public class SchedulerSettings
     {
-        public TimeSpan DueTime { get; set; }
+        public TimeSpan DelayStart { get; set; }
         public TimeSpan Period { get; set; }
 
         public IEnumerable<Task> Tasks { get; set; }
