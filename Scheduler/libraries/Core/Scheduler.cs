@@ -34,7 +34,7 @@ namespace Scaffolding.Scheduler.Core
                 jobAddTasks.Add(System.Threading.Tasks.Task.Run(
                     () => {
                         Schedule s = new Schedule((x) => x.Initialize(t.Schedule)
-                        , (d) => (d.DayOfWeek != DayOfWeek.Saturday && d.DayOfWeek != DayOfWeek.Sunday));
+                            , (d) => (d.DayOfWeek != DayOfWeek.Saturday && d.DayOfWeek != DayOfWeek.Sunday));
 
                         IEnumerable<DateTime> points = s.Resolve(DateTime.UtcNow, DateTime.UtcNow.Add(t.Horizon));
 
