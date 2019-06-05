@@ -16,6 +16,7 @@ namespace Scaffolding.Scheduler.Abstractions
         /// </summary>
         public DateTime? NotAfter { get; private set; }
         public string Agent { get; private set; }
+        public string Arguments { get; private set; } = "";
         /// <summary>
         /// Utc
         /// </summary>
@@ -37,7 +38,7 @@ namespace Scaffolding.Scheduler.Abstractions
         
         public JobState State { get; private set; }
 
-        public static Job Create(string identifier, DateTime notBefore, string agent, DateTime? notAfter)
+        public static Job Create(string identifier, DateTime notBefore, string agent, string arguments, DateTime? notAfter)
         {
             if (string.IsNullOrWhiteSpace(identifier))
                 throw new Exception("Identifier must be specified");
@@ -46,6 +47,7 @@ namespace Scaffolding.Scheduler.Abstractions
             {
                 Identifier = identifier.Trim(),
                 NotBefore = notBefore,
+                Arguments = arguments,
                 Agent = agent ?? string.Empty,
                 NotAfter = notAfter
             };

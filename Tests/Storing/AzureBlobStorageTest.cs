@@ -1,6 +1,5 @@
 ﻿using Scaffolding.Storage.Abstractions;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
