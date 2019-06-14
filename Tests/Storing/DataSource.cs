@@ -19,7 +19,7 @@ namespace Scaffolding.Tests.Storage
         public DataSource()
         {
             _provider = new ServiceCollection()
-                .AddAzureBlobStorage<IFileRepository>(AZURE_STORAGE_CS, AZURE_CONTAINER_NAME)
+                .AddAzureBlobStorage(AZURE_STORAGE_CS, AZURE_CONTAINER_NAME)
                 .BuildServiceProvider();
         }
     }
