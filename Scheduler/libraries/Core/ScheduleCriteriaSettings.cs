@@ -9,8 +9,21 @@ namespace Scaffolding.Scheduler.Core
     {
         [JsonProperty(PropertyName = "day", Order = 1)]
         public ScheduleCriteriaSettings<DayMode> Day { get; set; }
-        [JsonProperty(PropertyName = "time", Order = 1)]
+        [JsonProperty(PropertyName = "time", Order = 2)]
         public ScheduleCriteriaSettings<TimeMode> Time { get; set; }
+
+        public ScheduleCriteriaSettings Initialize(string data)
+        {
+            if (string.IsNullOrWhiteSpace(data))
+                throw new ArgumentException("Invalid schedule");
+
+            ScheduleCriteriaSettings des = JsonConvert.DeserializeObject<ScheduleCriteriaSettings>(data);
+
+            Day = des.Day;
+            Time = des.Time;
+
+            return this;
+        }
     }
 
     public class ScheduleCriteriaSettings<T> where T : Enum

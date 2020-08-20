@@ -7,24 +7,24 @@ namespace Scaffolding.Scheduler.Abstractions
 {
     public enum JobState
     {
-        [Description("Created")]
+        [Description("created")]
         Created,
-        [Description("InProgress")]
+        [Description("inprogress")]
         InProgress,
         /// <summary>
         /// Done successfully
         /// </summary>
-        [Description("Done")]
+        [Description("done")]
         Done,
         /// <summary>
         /// Failed
         /// </summary>
-        [Description("Failed")]
+        [Description("failed")]
         Failed,
         /// <summary>
         /// Closed manually
         /// </summary>
-        [Description("Closed")]
+        [Description("closed")]
         Closed
     }
 }

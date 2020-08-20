@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Scheduler\libraries\Abstractions\Scaffolding.Scheduler.Abstractions.csproj" />
     <ProjectReference Include="..\..\Utils\Abstractions\Scaffolding.Utils.Abstractions.csproj" />
     <ProjectReference Include="..\..\Utils\Maintenance\ScaffoldingUtils.Maintenance.csproj" />
   </ItemGroup>

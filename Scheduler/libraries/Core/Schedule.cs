@@ -26,17 +26,15 @@ namespace Scaffolding.Scheduler.Core
         {
             var result = new List<DateTime>();
 
-            if (from <= to)
+            if (from > to)
                 return result;
 
-            DateTime date = from.Date;
+            var points = ResolveForDate(from, to);
 
-            while (date <= to.Date)
-            {
-                if (IsDateMatch(date))
-                    result.AddRange(ResolveForDate(from, to));
-            }
-
+            foreach (var p in points)
+                if (IsDateMatch(p.Date))
+                    result.Add(p);
+ 
             return result;
         }
 
@@ -135,6 +133,8 @@ namespace Scaffolding.Scheduler.Core
                             foreach (TimeSpan checkpoint in args)
                                 if (startDate.Add(checkpoint) >= from && startDate.Add(checkpoint) <= to)
                                     result.Add(startDate.Add(checkpoint));
+
+                            startDate = startDate.AddDays(1);
                         }
 
                         break;
